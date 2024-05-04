@@ -1,84 +1,55 @@
 pipeline {
     agent any
 
+    triggers {
+        cron('0 0 * * *')
+    }
+
+    environment {
+        // Define Maven and Java installations
+        mvnHome = tool 'Maven'
+        javaHome = tool 'Java'
+    }
+
     stages {
-        stage('Setup Docker') {
+        stage('Checkout') {
             steps {
-                script {
-                    // Check if Docker is already installed
-                    def dockerInstalled = sh(script: "docker --version", returnStatus: true) == 0
-
-                    // Install Docker if not already installed
-                    if (!dockerInstalled) {
-                        // Install Docker using the recommended script
-                        sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
-                        sh 'sh get-docker.sh'
-                    }
-
-                    // Check if Docker is running
-                    def dockerRunning = sh(script: "docker info", returnStatus: true) == 0
-
-                    // Start Docker if not already running
-                    if (!dockerRunning) {
-                        sh 'sudo systemctl start docker'
-                    }
-
-                    // Add Jenkins user to docker group
-                    sh 'sudo usermod -aG docker jenkins'
-
-                    // Pull Selenium Grid Docker images
-                    docker.image('selenium/hub:latest').pull()
-                    docker.image('selenium/node-chrome:latest').pull()
-                    docker.image('selenium/node-firefox:latest').pull()
-                }
-            }
-        }
-
-        stage('Run Tests') {
-            steps {
-                // Checkout Git repository
+                // Checkout Maven Selenium Java project from Git
                 git branch: 'main', url: 'https://github.com/shohel677/selenium-docker.git'
-
-                // Start Selenium Grid containers
-                script {
-                    docker.run("-d", "--name selenium-hub", "selenium/hub:latest")
-                    docker.run("-d", "--name selenium-node-chrome", "--link selenium-hub:hub", "selenium/node-chrome:latest")
-                    docker.run("-d", "--name selenium-node-firefox", "--link selenium-hub:hub", "selenium/node-firefox:latest")
-                }
-
-                // Run Selenium tests with specified Maven command
-                sh "${mvnHome}/bin/mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
-
-                // Copy the report file to the workspace
-                sh 'cp reports/*.html $WORKSPACE'
             }
         }
 
-        stage('Stop Selenium Grid') {
+        stage('Build') {
             steps {
-                // Stop Selenium Grid containers
-                script {
-                    docker.stop('selenium-hub', 'selenium-node-chrome', 'selenium-node-firefox')
-                    docker.remove('selenium-hub', 'selenium-node-chrome', 'selenium-node-firefox')
-                }
+                // Build Maven project
+                sh "${mvnHome}/bin/mvn clean install"
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run Selenium tests
+                sh "${mvnHome}/bin/mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
             }
         }
 
         stage('Email Report') {
             steps {
-                emailext (
-                    to: 'golzar@gmail.com',
-                    subject: 'Test Report',
-                    body: 'Attached is the test report.',
-                    attachmentsPattern: '$WORKSPACE/*.html'
-                )
+                script {
+                    // Copy test report to workspace
+                    sh 'cp -r report $WORKSPACE/'
+                    // Send email with attached test report
+                    emailext body: 'Please find attached test report.',
+                             subject: 'Selenium Test Report',
+                             attachmentsPattern: "$WORKSPACE/report/*.*",
+                             to: 'golzarahamedshohel@gmail.com'
+                }
             }
-        }
-
-        stage('Clean Workspace') {
-            steps {
-                // Clean the workspace
-                cleanWs()
+            post {
+                always {
+                    // Clean workspace
+                    cleanWs()
+                }
             }
         }
     }
