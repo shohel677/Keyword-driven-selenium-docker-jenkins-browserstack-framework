@@ -1,0 +1,27 @@
+00:05:38.575 INFO  Starting testcase: testToVerifyRegistration
+00:05:40.718 INFO  Open URL: https://demo.nopcommerce.com/
+00:05:42.033 INFO  STEP: User landed on NopCommerce homepage
+00:05:43.034 INFO  user clicked on register button
+00:05:43.170 INFO  STEP: User landed on NopCommerce registration page
+00:05:43.453 INFO  Gender selected: Male
+00:05:45.778 INFO  First name input field filled with text Anthony
+00:05:47.140 INFO  Last name input field filled with text Abraham
+00:05:47.660 INFO  Selected birthday: 20
+00:05:47.985 INFO  Selected birth month: May
+00:05:49.301 INFO  Selected birth year: 1995
+00:05:50.327 INFO  'Nopcommerce registration feature Test' is successfully passed
+00:05:50.328 INFO  ---------------------------------------------------
+00:05:51.883 INFO  Starting testcase: testToVerifyRegistration
+00:05:52.675 INFO  Open URL: https://demo.nopcommerce.com/
+00:05:53.430 INFO  STEP: User landed on NopCommerce homepage
+00:05:54.405 INFO  user clicked on register button
+00:05:54.891 INFO  STEP: User landed on NopCommerce registration page
+00:05:55.253 INFO  Gender selected: Female
+00:05:57.843 INFO  First name input field filled with text Alexandra
+00:05:59.428 INFO  Last name input field filled with text Allan
+00:05:59.898 INFO  Selected birthday: 9
+00:06:00.193 INFO  Selected birth month: May
+00:06:01.414 INFO  Selected birth year: 1999
+00:06:02.423 INFO  'Nopcommerce registration feature Test' is successfully passed
+00:06:02.423 INFO  ---------------------------------------------------
+00:06:05.355 INFO  Starting testcase: testToVerifyRegistration
