@@ -1,27 +1,17 @@
 pipeline {
     agent any
 
+    triggers {
+        cron('0 0 * * *')
+    }
+
+    environment {
+        // Define Maven and Java installations
+        mvnHome = tool 'Maven'
+        javaHome = tool 'Java'
+    }
+
     stages {
-        stage('Install Tools') {
-            steps {
-                script {
-                    // Install JDK
-                    tool name: 'Java', type: 'jdk'
-
-                    // Install Maven
-                    def mvnHome = tool name: 'Maven', type: 'maven'
-
-                    // Add Maven and Java to PATH
-                    env.PATH = "${mvnHome}:${env.PATH}"
-                    env.PATH += ":${tool 'Java'}/bin"
-
-                    // Print Java and Maven versions
-                    sh 'java -version'
-                    sh 'mvn -version'
-                }
-            }
-        }
-
         stage('Checkout') {
             steps {
                 // Checkout Maven Selenium Java project from Git
@@ -32,14 +22,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Build Maven project
-                sh 'mvn clean install'
+                sh "${mvnHome}/bin/mvn clean install"
             }
         }
 
         stage('Test') {
             steps {
                 // Run Selenium tests
-                sh 'mvn clean test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux'
+                sh "${mvnHome}/bin/mvn clean test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
             }
             post {
                 always {
