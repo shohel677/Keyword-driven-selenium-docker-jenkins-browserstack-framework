@@ -1,11 +1,27 @@
 pipeline {
     agent any
 
-    triggers {
-        cron('0 0 * * *')
-    }
-
     stages {
+        stage('Install Tools') {
+            steps {
+                script {
+                    // Install JDK
+                    tool name: 'Java', type: 'jdk', installationRoot: '/usr/lib/jvm/java-11-openjdk-amd64'
+
+                    // Install Maven
+                    def mvnHome = tool name: 'Maven', type: 'maven', installationRoot: '/opt/apache-maven-3.8.4'
+
+                    // Add Maven and Java to PATH
+                    env.PATH = "${mvnHome}:${env.PATH}"
+                    env.PATH += ":${tool 'Java'}/bin"
+
+                    // Print Java and Maven versions
+                    sh 'java -version'
+                    sh 'mvn -version'
+                }
+            }
+        }
+
         stage('Checkout') {
             steps {
                 // Checkout Maven Selenium Java project from Git
