@@ -22,7 +22,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build Maven project
-                sh "mvn clean install"
+                sh "${mvnHome}/bin/mvn clean install"
             }
         }
 
@@ -31,7 +31,6 @@ pipeline {
                 // Run Selenium tests
                 sh "clean test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
             }
-         
         }
 
         stage('Email Report') {
