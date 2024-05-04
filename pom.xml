@@ -71,11 +71,9 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.2.5</version>
                     <configuration>
-                        <suiteXmlFiles>
-                            <!--suppress UnresolvedMavenProperty -->
-                            <suiteXmlFile>${suiteFile}</suiteXmlFile>
-                        </suiteXmlFiles>
-
+                        <testSuiteXmlFiles>
+                            <testSuiteXmlFile>${testSuiteXmlFile}</testSuiteXmlFile>
+                        </testSuiteXmlFiles>
                     </configuration>
                 </plugin>
             </plugins>
