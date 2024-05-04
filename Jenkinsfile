@@ -1,27 +1,37 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Setup Docker') {
-            steps {
-                script {
-                    // Install Docker
+    stage('Setup Docker') {
+        steps {
+            script {
+                // Check if Docker is already installed
+                def dockerInstalled = sh(script: "docker --version", returnStatus: true) == 0
+
+                // Install Docker if not already installed
+                if (!dockerInstalled) {
+                    // Install Docker using the recommended script
                     sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
                     sh 'sh get-docker.sh'
-
-                    // Add Jenkins user to docker group
-                    sh 'sudo usermod -aG docker jenkins'
-
-                    // Start Docker service
-                    sh 'sudo systemctl start docker'
-
-                    // Pull Selenium Grid Docker images
-                    docker.image('selenium/hub:latest').pull()
-                    docker.image('selenium/node-chrome:latest').pull()
-                    docker.image('selenium/node-firefox:latest').pull()
                 }
+
+                // Check if Docker is running
+                def dockerRunning = sh(script: "docker info", returnStatus: true) == 0
+
+                // Start Docker if not already running
+                if (!dockerRunning) {
+                    sh 'sudo systemctl start docker'
+                }
+
+                // Add Jenkins user to docker group
+                sh 'sudo usermod -aG docker jenkins'
+
+                // Pull Selenium Grid Docker images
+                docker.image('selenium/hub:latest').pull()
+                docker.image('selenium/node-chrome:latest').pull()
+                docker.image('selenium/node-firefox:latest').pull()
             }
         }
+    }
 
         stage('Run Tests') {
             steps {
