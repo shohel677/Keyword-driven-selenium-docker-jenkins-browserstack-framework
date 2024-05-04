@@ -7,7 +7,7 @@ pipeline {
                 script {
                     // Install Docker
                     sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
-                    sh 'sudo sh get-docker.sh'
+                    sh 'sh get-docker.sh'
 
                     // Add Jenkins user to docker group
                     sh 'sudo usermod -aG docker jenkins'
