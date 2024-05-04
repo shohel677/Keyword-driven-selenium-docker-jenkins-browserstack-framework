@@ -64,8 +64,3 @@ pipeline {
     }
 }
 
-def fileExists(String filePath) {
-    def process = "test -e ${filePath}".execute()
-    process.waitFor()
-    return process.exitValue() == 0
-}
