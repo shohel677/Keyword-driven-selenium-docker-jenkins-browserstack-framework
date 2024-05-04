@@ -30,7 +30,9 @@ pipeline {
             steps {
                 // Start Selenium Grid containers
                 script {
-                    docker-compose up -d
+                    docker.run("-d", "--name selenium-hub", "selenium/hub:latest")
+                    docker.run("-d", "--name selenium-node-chrome", "--link selenium-hub:hub", "selenium/node-chrome:latest")
+                    docker.run("-d", "--name selenium-node-firefox", "--link selenium-hub:hub", "selenium/node-firefox:latest")
                 }
             }
         }
@@ -51,7 +53,8 @@ pipeline {
             steps {
                 // Stop Selenium Grid containers
                 script {
-                    docker-compose down
+                    docker.stop('selenium-hub', 'selenium-node-chrome', 'selenium-node-firefox')
+                    docker.remove('selenium-hub', 'selenium-node-chrome', 'selenium-node-firefox')
                 }
             }
         }
