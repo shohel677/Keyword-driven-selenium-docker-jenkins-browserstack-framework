@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'docker-agent'
+    }
 
     triggers {
         cron('0 0 * * *')
@@ -51,6 +53,14 @@ pipeline {
                     cleanWs()
                 }
             }
+        }
+    }
+
+    // Post-build configuration
+    post {
+        always {
+            // Clean workspace
+            cleanWs()
         }
     }
 }
