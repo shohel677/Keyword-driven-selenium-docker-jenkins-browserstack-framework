@@ -29,7 +29,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run Selenium tests
-                sh "${mvnHome}/bin/mvn test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
+                sh "clean test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
             }
         }
 

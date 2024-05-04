@@ -1,12 +1,6 @@
-23:24:43.913 INFO  Starting testcase: testToVerifyRegistration1
-23:24:45.398 INFO  Open URL: https://demo.nopcommerce.com/
-23:24:46.265 INFO  STEP: User landed on NopCommerce homepage
-23:24:46.270 INFO  'Nopcommerce registration feature Test1' is successfully passed
-23:24:46.271 INFO  ---------------------------------------------------
-23:24:48.417 INFO  Starting testcase: testToVerifyRegistration
-23:24:49.780 INFO  Open URL: https://demo.nopcommerce.com/
-23:24:50.151 INFO  STEP: User landed on NopCommerce homepage
-23:24:51.489 INFO  user clicked on register button
-23:24:51.617 INFO  STEP: User landed on NopCommerce registration page
-23:24:51.817 INFO  Gender selected: Male
-23:24:54.112 INFO  First name input field filled with text Anthony
+23:35:54.642 INFO  Starting testcase: testToVerifyRegistration
+23:35:56.674 INFO  Open URL: https://demo.nopcommerce.com/
+23:35:57.280 INFO  STEP: User landed on NopCommerce homepage
+23:35:57.947 INFO  user clicked on register button
+23:35:58.053 INFO  STEP: User landed on NopCommerce registration page
+23:35:58.199 INFO  Gender selected: Male

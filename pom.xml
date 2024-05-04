@@ -71,9 +71,13 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.2.5</version>
                     <configuration>
-                        <testSuiteXmlFiles>
-                            <testSuiteXmlFile>${testSuiteXmlFile}</testSuiteXmlFile>
-                        </testSuiteXmlFiles>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${suiteFile}</suiteXmlFile>
+                        </suiteXmlFiles>
+                        <systemPropertyVariables>
+                            <cleanData>false</cleanData>
+                        </systemPropertyVariables>
+                        <forkCount>0</forkCount>
                     </configuration>
                 </plugin>
             </plugins>
