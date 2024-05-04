@@ -6,10 +6,10 @@ pipeline {
             steps {
                 script {
                     // Install JDK
-                    tool name: 'Java', type: 'jdk', installationRoot: '/usr/lib/jvm/java-11-openjdk-amd64'
+                    tool name: 'Java', type: 'jdk'
 
                     // Install Maven
-                    def mvnHome = tool name: 'Maven', type: 'maven', installationRoot: '/opt/apache-maven-3.8.4'
+                    def mvnHome = tool name: 'Maven', type: 'maven'
 
                     // Add Maven and Java to PATH
                     env.PATH = "${mvnHome}:${env.PATH}"
