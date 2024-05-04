@@ -1,0 +1,6 @@
+Gender,First name,Last name,Date of birth,Email,Company name,Newsletter,Password,Confirm password,msg
+Male,Anthony,Abraham,20/05/1995,email,Brainstation-23,checked,pass@1234,pass@1234,Your registration completed
+Female,Alexandra,Allan,9/05/1999,email,Brainstation-23,unchecked,pass@1234,pass@1234,Your registration completed
+Female,Alison,Alsop,3/05/2000,email,Brainstation-23,unchecked,pass@1234,pass@1234,Your registration completed
+Male,Amanda,Anderson,2/05/2001,email,Brainstation-23,checked,pass@1234,pass@1234,Your registration completed
+Female,Austin,Arnold,10/05/1990,email,Brainstation-23,unchecked,pass@1234,pass@1234,Your registration completed

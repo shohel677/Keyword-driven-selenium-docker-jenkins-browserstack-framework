@@ -1,0 +1,16 @@
+DataLoader\TestData.class
+Pages\Pages.class
+AbstractComponents\FrameworkAssertionLibrary$AssertionInfo.class
+DataLoader\Reader.class
+DataLoader\Data\testToVerifyRegistration.class
+Pages\HomePage.class
+DataLoader\CSVFields.class
+DataLoader\FillFields$dobSelectNameProperty.class
+DataLoader\TestEssentials.class
+Utils\ExtentReporterNG.class
+AbstractComponents\GenericWebPage.class
+DataLoader\FillFields.class
+AbstractComponents\AbstractComponent.class
+AbstractComponents\FrameworkAssertionLibrary.class
+Pages\RegisterPage.class
+Pages\InitialPage.class

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  windows_service:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile-windows
+    container_name: my_windows_container
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:C:\data
+    command: cmd /K echo Hello from Windows Container
