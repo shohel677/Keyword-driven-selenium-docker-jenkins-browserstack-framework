@@ -38,13 +38,18 @@ pipeline {
         stage('Email Report') {
             steps {
                 script {
-                    // Copy test report to workspace
-                    bat 'xcopy /s report %WORKSPACE%'
-                    // Send email with attached test report
-                    emailext body: 'Please find attached test report.',
-                             subject: 'Selenium Test Report',
-                             attachmentsPattern: "%WORKSPACE%\\report\\*.*",
-                             to: 'golzarahamedshohel@gmail.com'
+                    // Check if the reports directory exists
+                    if (fileExists('reports')) {
+                        // Copy report.html from reports folder to workspace
+                        bat 'copy reports\\report.html %WORKSPACE%'
+                        // Send email with attached test report
+                        emailext body: 'Please find attached test report.',
+                                 subject: 'Selenium Test Report',
+                                 attachmentsPattern: "%WORKSPACE%\\report.html",
+                                 to: 'golzarahamedshohel@gmail.com'
+                    } else {
+                        echo 'Reports directory does not exist.'
+                    }
                 }
             }
             post {
@@ -63,4 +68,9 @@ pipeline {
             cleanWs()
         }
     }
+}
+
+def fileExists(String filePath) {
+    def file = new File(filePath)
+    return file.exists()
 }
