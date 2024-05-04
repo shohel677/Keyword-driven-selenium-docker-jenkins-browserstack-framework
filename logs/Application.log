@@ -1,6 +1,3 @@
-23:35:54.642 INFO  Starting testcase: testToVerifyRegistration
-23:35:56.674 INFO  Open URL: https://demo.nopcommerce.com/
-23:35:57.280 INFO  STEP: User landed on NopCommerce homepage
-23:35:57.947 INFO  user clicked on register button
-23:35:58.053 INFO  STEP: User landed on NopCommerce registration page
-23:35:58.199 INFO  Gender selected: Male
+23:50:38.596 INFO  Starting testcase: testToVerifyRegistration
+23:50:41.987 INFO  Open URL: https://demo.nopcommerce.com/
+23:50:42.740 INFO  STEP: User landed on NopCommerce homepage
