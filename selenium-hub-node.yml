@@ -117,7 +117,7 @@ services:
       - SE_OTEL_TRACES_EXPORTER=otlp
       - SE_OTEL_EXPORTER_ENDPOINT=http://jaeger:4317
 
-  jenkins-node:
+  jenkins-master:
     image: jenkins/jenkins:lts
     ports:
       - "8080:8080"
@@ -128,9 +128,9 @@ services:
   jenkins-agent:
     image: jenkins/inbound-agent
     environment:
-      - JENKINS_URL=http://jenkins-master:8080
-      - JENKINS_SECRET=your_secret
-      - JENKINS_AGENT_NAME=your_agent_name
+      - JENKINS_URL=http://localhost:8080
+      - JENKINS_SECRET=2569e4fb971ce19c982a3c318736888af86d468612e8a9cde75bec29860bb113
+      - JENKINS_AGENT_NAME=jenkins-agent
     networks:
       - selenium-network
     depends_on:
