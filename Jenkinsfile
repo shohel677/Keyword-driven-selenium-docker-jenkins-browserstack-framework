@@ -8,19 +8,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/your-username/your-repository.git'
+                git branch: 'master', url: 'https://github.com/shohel677/selenium-docker.git'
             }
         }
 
         stage('Build') {
-            agent {
-                docker {
-                    image 'maven:3.9.3-jdk-11'
-                    args '-v $HOME/.m2:/root/.m2'
-                }
-            }
             steps {
-                sh 'mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml'
+                script {
+                    docker.image('maven:3.9.3-jdk-11').inside {
+                        sh 'mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml'
+                    }
+                }
             }
         }
 
