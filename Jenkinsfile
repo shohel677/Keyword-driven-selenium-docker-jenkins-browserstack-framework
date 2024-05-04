@@ -2,54 +2,75 @@ pipeline {
     agent any
 
     triggers {
-        cron('0 0 * * *')
-    }
+            cron('0 0 * * *')
+        }
 
-    environment {
-        // Define Maven and Java installations
-        mvnHome = tool 'Maven'
-        javaHome = tool 'Java'
-    }
+        environment {
+            // Define Maven and Java installations
+            mvnHome = tool 'Maven'
+            javaHome = tool 'Java'
+        }
 
     stages {
-        stage('Checkout') {
+        stage('Setup') {
             steps {
-                // Checkout Maven Selenium Java project from Git
+                // Checkout Git repository
                 git branch: 'main', url: 'https://github.com/shohel677/selenium-docker.git'
+
+                // Pull Selenium Grid Docker images
+                script {
+                    docker.image('selenium/hub:latest').pull()
+                    docker.image('selenium/node-chrome:latest').pull()
+                    docker.image('selenium/node-firefox:latest').pull()
+                }
             }
         }
 
-        stage('Build') {
+        stage('Start Selenium Grid') {
             steps {
-                // Build Maven project
-                sh "${mvnHome}/bin/mvn clean install"
+                // Start Selenium Grid containers
+                script {
+                    docker-compose up -d
+                }
             }
         }
 
-        stage('Test') {
+        stage('Run Tests') {
             steps {
-                // Run Selenium tests
-                sh "${mvnHome}/bin/mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
+                // Run Selenium tests with specified Maven command
+                script {
+                    sh '${mvnHome}/bin/mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml -Dplatform=linux'
+                }
+
+                // Copy the report file to the workspace
+                sh 'cp reports/*.html $WORKSPACE'
+            }
+        }
+
+        stage('Stop Selenium Grid') {
+            steps {
+                // Stop Selenium Grid containers
+                script {
+                    docker-compose down
+                }
             }
         }
 
         stage('Email Report') {
             steps {
-                script {
-                    // Copy test report to workspace
-                    sh 'cp -r report $WORKSPACE/'
-                    // Send email with attached test report
-                    emailext body: 'Please find attached test report.',
-                             subject: 'Selenium Test Report',
-                             attachmentsPattern: "$WORKSPACE/report/*.*",
-                             to: 'golzarahamedshohel@gmail.com'
-                }
+                emailext (
+                    to: 'golzar@gmail.com',
+                    subject: 'Test Report',
+                    body: 'Attached is the test report.',
+                    attachmentsPattern: '$WORKSPACE/*.html'
+                )
             }
-            post {
-                always {
-                    // Clean workspace
-                    cleanWs()
-                }
+        }
+
+        stage('Clean Workspace') {
+            steps {
+                // Clean the workspace
+                cleanWs()
             }
         }
     }
