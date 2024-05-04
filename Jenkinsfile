@@ -31,7 +31,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run Selenium tests
-                bat "\"${mvnHome}\\bin\\mvn\" clean test -Dbrowser=chrome -Dplatform=windows -DhubUrl=http://localhost:4444/wd/hub"
+                bat "\"${mvnHome}\\bin\\mvn\" clean test -Dbrowser=chrome -Dplatform=linux -DhubUrl=http://localhost:4444/wd/hub"
             }
         }
 
