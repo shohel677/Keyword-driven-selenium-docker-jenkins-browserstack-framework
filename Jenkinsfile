@@ -52,12 +52,6 @@ pipeline {
                     }
                 }
             }
-            post {
-                always {
-                    // Clean workspace
-                    cleanWs()
-                }
-            }
         }
     }
 
@@ -71,11 +65,7 @@ pipeline {
 }
 
 def fileExists(String filePath) {
-    return fileExistsWindows(filePath)
-}
-
-def fileExistsWindows(String filePath) {
-    def process = "cmd /c if exist ${filePath} (exit /b 0) else (exit /b 1)".execute()
+    def process = "test -e ${filePath}".execute()
     process.waitFor()
     return process.exitValue() == 0
 }
