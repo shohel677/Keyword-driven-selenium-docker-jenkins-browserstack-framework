@@ -31,7 +31,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run Selenium tests
-                bat "\"${mvnHome}\\bin\\mvn\" clean test -Dbrowser=chrome -Dplatform=windows -DhubUrl=http://localhost:4444/wd/hub"
+                bat "\"${mvnHome}\\bin\\mvn\" clean test -Dbrowser=chrome -DsuiteFile=suites\\user_registration.xml -Dplatform=windows -DhubUrl=http://localhost:4444/wd/hub"
             }
         }
 
@@ -41,7 +41,7 @@ pipeline {
                     // Check if the reports directory exists
                     if (fileExists('reports')) {
                         // Copy report.html from reports folder to workspace
-                        bat 'copy reports\\report.html %WORKSPACE%'
+                        bat 'xcopy /s reports\\report.html %WORKSPACE%'
                         // Send email with attached test report
                         emailext body: 'Please find attached test report.',
                                  subject: 'Selenium Test Report',
@@ -71,6 +71,11 @@ pipeline {
 }
 
 def fileExists(String filePath) {
-    def file = new File(filePath)
-    return file.exists()
+    return fileExistsWindows(filePath)
+}
+
+def fileExistsWindows(String filePath) {
+    def process = "cmd /c if exist ${filePath} (exit /b 0) else (exit /b 1)".execute()
+    process.waitFor()
+    return process.exitValue() == 0
 }
