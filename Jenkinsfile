@@ -6,29 +6,43 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Build') {
             steps {
-                git branch: 'main', url: 'https://github.com/shohel677/selenium-docker.git'
+                // Checkout your Maven Selenium Java project from Git
+                git 'https://github.com/shohel677/selenium-docker.git'
+
+                // Build Maven project
+                sh 'mvn clean install'
             }
         }
 
-        stage('Build') {
+        stage('Test') {
             steps {
-                script {
-                    docker.image('maven:3.9.3-jdk-11').inside {
-                        sh 'mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml'
-                    }
+                // Run Selenium tests
+                sh 'mvn clean test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux'
+            }
+            post {
+                always {
+                    // Archive the test reports
+                    archiveArtifacts(artifacts: '$WORKSPACE/report/*.*', allowEmptyArchive: true)
                 }
             }
         }
 
         stage('Email Report') {
             steps {
-                sh 'cp -r report $WORKSPACE/'
-                emailext body: 'Please find attached test report.',
-                         subject: 'Selenium Test Report',
-                         attachmentsPattern: "$WORKSPACE/report/*.*",
-                         to: 'golzarahamedshohel@gmail.com'
+                script {
+                    sh 'cp -r report $WORKSPACE/'
+                    emailext body: 'Please find attached test report.',
+                             subject: 'Selenium Test Report',
+                             attachmentsPattern: "$WORKSPACE/report/*.*",
+                             to: 'golzarahamedshohel@gmail.com'
+                }
+            }
+            post {
+                always {
+                    cleanWs()
+                }
             }
         }
     }
