@@ -6,11 +6,15 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                // Checkout Maven Selenium Java project from Git
+                git branch: 'main', url: 'https://github.com/shohel677/selenium-docker.git'
+            }
+        }
+
         stage('Build') {
             steps {
-                // Checkout your Maven Selenium Java project from Git
-                git 'https://github.com/shohel677/selenium-docker.git'
-
                 // Build Maven project
                 sh 'mvn clean install'
             }
@@ -24,7 +28,7 @@ pipeline {
             post {
                 always {
                     // Archive the test reports
-                    archiveArtifacts(artifacts: '$WORKSPACE/report/*.*', allowEmptyArchive: true)
+                    archiveArtifacts(artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true)
                 }
             }
         }
@@ -32,7 +36,9 @@ pipeline {
         stage('Email Report') {
             steps {
                 script {
+                    // Copy test report to workspace
                     sh 'cp -r report $WORKSPACE/'
+                    // Send email with attached test report
                     emailext body: 'Please find attached test report.',
                              subject: 'Selenium Test Report',
                              attachmentsPattern: "$WORKSPACE/report/*.*",
@@ -41,6 +47,7 @@ pipeline {
             }
             post {
                 always {
+                    // Clean workspace
                     cleanWs()
                 }
             }
