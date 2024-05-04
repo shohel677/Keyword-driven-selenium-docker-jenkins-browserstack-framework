@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     triggers {
-            cron('0 0 * * *')
-        }
+        cron('0 0 * * *')
+    }
 
-        environment {
-            // Define Maven and Java installations
-            mvnHome = tool 'Maven'
-            javaHome = tool 'Java'
-        }
+    environment {
+        // Define Maven and Java installations
+        mvnHome = tool 'Maven'
+        javaHome = tool 'Java'
+    }
 
     stages {
         stage('Setup') {
@@ -39,7 +39,7 @@ pipeline {
             steps {
                 // Run Selenium tests with specified Maven command
                 script {
-                    sh '${mvnHome}/bin/mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml -Dplatform=linux'
+                    sh "${mvnHome}/bin/mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
                 }
 
                 // Copy the report file to the workspace
