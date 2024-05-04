@@ -1,24 +1,21 @@
 pipeline {
     agent any
 
-    triggers {
-        cron('0 0 * * *')
-    }
-
-    environment {
-        // Define Maven and Java installations
-        mvnHome = tool 'Maven'
-        javaHome = tool 'Java'
-    }
-
     stages {
-        stage('Setup') {
+        stage('Setup Docker') {
             steps {
-                // Checkout Git repository
-                git branch: 'main', url: 'https://github.com/shohel677/selenium-docker.git'
-
-                // Pull Selenium Grid Docker images
                 script {
+                    // Install Docker
+                    sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
+                    sh 'sudo sh get-docker.sh'
+
+                    // Add Jenkins user to docker group
+                    sh 'sudo usermod -aG docker jenkins'
+
+                    // Start Docker service
+                    sh 'sudo systemctl start docker'
+
+                    // Pull Selenium Grid Docker images
                     docker.image('selenium/hub:latest').pull()
                     docker.image('selenium/node-chrome:latest').pull()
                     docker.image('selenium/node-firefox:latest').pull()
@@ -26,23 +23,21 @@ pipeline {
             }
         }
 
-        stage('Start Selenium Grid') {
+        stage('Run Tests') {
             steps {
+                // Your existing pipeline stages
+                // Checkout Git repository
+                git branch: 'main', url: 'https://github.com/shohel677/selenium-docker.git'
+
                 // Start Selenium Grid containers
                 script {
                     docker.run("-d", "--name selenium-hub", "selenium/hub:latest")
                     docker.run("-d", "--name selenium-node-chrome", "--link selenium-hub:hub", "selenium/node-chrome:latest")
                     docker.run("-d", "--name selenium-node-firefox", "--link selenium-hub:hub", "selenium/node-firefox:latest")
                 }
-            }
-        }
 
-        stage('Run Tests') {
-            steps {
                 // Run Selenium tests with specified Maven command
-                script {
-                    sh "${mvnHome}/bin/mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
-                }
+                sh "${mvnHome}/bin/mvn clean test -Dbrowser=chrome -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
 
                 // Copy the report file to the workspace
                 sh 'cp reports/*.html $WORKSPACE'
