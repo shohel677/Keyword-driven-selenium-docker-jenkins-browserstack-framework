@@ -24,14 +24,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Build Maven project
-                sh "${mvnHome}/bin/mvn clean install"
+                bat "\"${mvnHome}\\bin\\mvn\" clean install"
             }
         }
 
         stage('Test') {
             steps {
                 // Run Selenium tests
-                sh "${mvnHome}/bin/mvn clean test -Dbrowser=chrome -Dplatform=linux -DhubUrl=http://localhost:4444/wd/hub"
+                bat "\"${mvnHome}\\bin\\mvn\" clean test -Dbrowser=chrome -Dplatform=linux -DhubUrl=http://localhost:4444/wd/hub"
             }
         }
 
@@ -41,11 +41,11 @@ pipeline {
                     // Check if the reports directory exists
                     if (fileExists('reports')) {
                         // Copy report.html from reports folder to workspace
-                        sh "cp -r reports/report.html ${WORKSPACE}"
+                        bat 'xcopy /s reports\\report.html %WORKSPACE%'
                         // Send email with attached test report
                         emailext body: 'Please find attached test report.',
                                  subject: 'Selenium Test Report',
-                                 attachmentsPattern: "${WORKSPACE}/report.html",
+                                 attachmentsPattern: "%WORKSPACE%\\report.html",
                                  to: 'golzarahamedshohel@gmail.com'
                     } else {
                         echo 'Reports directory does not exist.'
@@ -63,3 +63,4 @@ pipeline {
         }
     }
 }
+
