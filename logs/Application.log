@@ -25,3 +25,12 @@
 23:11:50.411 INFO  'Nopcommerce registration feature Test' is successfully passed
 23:11:50.411 INFO  ---------------------------------------------------
 23:12:07.811 INFO  Starting testcase: testToVerifyRegistration
+23:12:14.680 INFO  Open URL: https://demo.nopcommerce.com/
+23:12:22.022 INFO  STEP: User landed on NopCommerce homepage
+23:12:54.102 INFO  user clicked on register button
+23:13:18.850 INFO  STEP: User landed on NopCommerce registration page
+23:13:23.117 INFO  Gender selected: Female
+23:13:32.008 INFO  First name input field filled with text Alison
+23:13:59.587 INFO  Last name input field filled with text Alsop
+23:14:29.170 INFO  Selected birthday: 3
+23:14:34.231 INFO  Selected birth month: May

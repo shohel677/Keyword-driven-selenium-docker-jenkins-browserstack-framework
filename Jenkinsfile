@@ -31,12 +31,7 @@ pipeline {
                 // Run Selenium tests
                 sh "clean test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
             }
-            post {
-                always {
-                    // Archive the test reports
-                    archiveArtifacts(artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true)
-                }
-            }
+         
         }
 
         stage('Email Report') {
