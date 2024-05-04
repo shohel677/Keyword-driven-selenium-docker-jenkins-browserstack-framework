@@ -22,14 +22,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Build Maven project
-                sh "${mvnHome}/bin/mvn clean install"
+                sh "mvn clean install"
             }
         }
 
         stage('Test') {
             steps {
                 // Run Selenium tests
-                sh "mvn clean test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
+                sh "clean test -Dbrowser=edge -DsuiteFile=suites/user_registration.xml -Dplatform=linux"
             }
             post {
                 always {
