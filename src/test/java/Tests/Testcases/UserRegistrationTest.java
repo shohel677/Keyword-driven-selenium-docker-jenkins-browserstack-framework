@@ -20,6 +20,12 @@ public class UserRegistrationTest extends BaseTest {
         userRegistrationSteps.userSelectGender();
         userRegistrationSteps.userSetFirstNameAndLastName();
         userRegistrationSteps.userSetDOB();
+        userRegistrationSteps.userSetEmail();
+        userRegistrationSteps.userSetCompanyName();
+        userRegistrationSteps.userSetNewsletterOption();
+        userRegistrationSteps.userSetPassword();
+        userRegistrationSteps.userClickOnRegisterButton();
+        userRegistrationSteps.verifyRegistrationMessage();
 
     }
 

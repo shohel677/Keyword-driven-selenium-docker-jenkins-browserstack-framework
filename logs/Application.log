@@ -1,65 +1,34 @@
-02:14:30.799 INFO  Starting testcase: testToVerifyRegistration
-02:14:32.321 INFO  Open URL: https://demo.nopcommerce.com/
-02:14:32.762 INFO  STEP: User landed on NopCommerce homepage
-02:14:33.285 INFO  user clicked on register button
-02:14:33.391 INFO  STEP: User landed on NopCommerce registration page
-02:14:33.520 INFO  Gender selected: Male
-02:14:35.758 INFO  First name input field filled with text Anthony
-02:14:36.966 INFO  Last name input field filled with text Abraham
-02:14:37.193 INFO  Selected birthday: 20
-02:14:37.370 INFO  Selected birth month: May
-02:14:38.540 INFO  Selected birth year: 1995
-02:14:39.560 INFO  'Nopcommerce registration feature Test' is successfully passed
-02:14:39.560 INFO  ---------------------------------------------------
-02:14:40.163 INFO  Starting testcase: testToVerifyRegistration
-02:14:41.441 INFO  Open URL: https://demo.nopcommerce.com/
-02:14:41.639 INFO  STEP: User landed on NopCommerce homepage
-02:14:42.886 INFO  user clicked on register button
-02:14:43.000 INFO  STEP: User landed on NopCommerce registration page
-02:14:43.136 INFO  Gender selected: Female
-02:14:45.407 INFO  First name input field filled with text Alexandra
-02:14:46.603 INFO  Last name input field filled with text Allan
-02:14:46.806 INFO  Selected birthday: 9
-02:14:46.996 INFO  Selected birth month: May
-02:14:48.173 INFO  Selected birth year: 1999
-02:14:49.187 INFO  'Nopcommerce registration feature Test' is successfully passed
-02:14:49.187 INFO  ---------------------------------------------------
-02:14:49.767 INFO  Starting testcase: testToVerifyRegistration
-02:14:50.283 INFO  Open URL: https://demo.nopcommerce.com/
-02:14:50.512 INFO  STEP: User landed on NopCommerce homepage
-02:14:51.014 INFO  user clicked on register button
-02:14:51.100 INFO  STEP: User landed on NopCommerce registration page
-02:14:51.218 INFO  Gender selected: Female
-02:14:53.425 INFO  First name input field filled with text Alison
-02:14:54.605 INFO  Last name input field filled with text Alsop
-02:14:54.786 INFO  Selected birthday: 3
-02:14:55.013 INFO  Selected birth month: May
-02:14:56.172 INFO  Selected birth year: 2000
-02:14:57.179 INFO  'Nopcommerce registration feature Test' is successfully passed
-02:14:57.179 INFO  ---------------------------------------------------
-02:14:57.722 INFO  Starting testcase: testToVerifyRegistration
-02:14:59.100 INFO  Open URL: https://demo.nopcommerce.com/
-02:14:59.242 INFO  STEP: User landed on NopCommerce homepage
-02:14:59.726 INFO  user clicked on register button
-02:14:59.804 INFO  STEP: User landed on NopCommerce registration page
-02:14:59.918 INFO  Gender selected: Male
-02:15:02.128 INFO  First name input field filled with text Amanda
-02:15:03.339 INFO  Last name input field filled with text Anderson
-02:15:03.644 INFO  Selected birthday: 2
-02:15:03.862 INFO  Selected birth month: May
-02:15:05.092 INFO  Selected birth year: 2001
-02:15:06.107 INFO  'Nopcommerce registration feature Test' is successfully passed
-02:15:06.107 INFO  ---------------------------------------------------
-02:15:06.657 INFO  Starting testcase: testToVerifyRegistration
-02:15:07.230 INFO  Open URL: https://demo.nopcommerce.com/
-02:15:07.352 INFO  STEP: User landed on NopCommerce homepage
-02:15:07.827 INFO  user clicked on register button
-02:15:07.914 INFO  STEP: User landed on NopCommerce registration page
-02:15:08.024 INFO  Gender selected: Female
-02:15:10.242 INFO  First name input field filled with text Austin
-02:15:11.434 INFO  Last name input field filled with text Arnold
-02:15:11.580 INFO  Selected birthday: 10
-02:15:11.736 INFO  Selected birth month: May
-02:15:12.896 INFO  Selected birth year: 1990
-02:15:13.906 INFO  'Nopcommerce registration feature Test' is successfully passed
-02:15:13.906 INFO  ---------------------------------------------------
+18:29:53.993 INFO  Starting testcase: testToVerifyPlaceOrderAsGuest
+18:29:54.538 INFO  Open URL: https://demo.nopcommerce.com/
+18:29:54.782 INFO  STEP: User landed on NopCommerce homepage
+18:29:55.606 INFO  Clicking cell phones category option
+18:29:59.179 INFO  Click on Nokia Lumia 1020 for details page
+18:29:59.501 INFO  Enter quantity of product
+18:29:59.577 INFO  Click add to cart button
+18:30:00.633 INFO  Navigating to shopping cart
+18:30:00.766 INFO  Accept terms and condition
+18:30:02.444 INFO  Click checkout button
+18:30:03.245 INFO  Click checkout as guest button
+18:30:09.395 INFO  First name input field filled with text Alla
+18:30:10.543 INFO  Last name input field filled with text Donald
+18:30:11.757 INFO  Email input field filled with text email2024051261805260@automation.com
+18:30:12.893 INFO  Company input field filled with text BS-23
+18:30:14.122 INFO  City input field filled with text Dhaka
+18:30:15.258 INFO  Address 1 input field filled with text 45 demo street
+18:30:16.382 INFO  Zip / postal code input field filled with text 1200
+18:30:17.519 INFO  Phone number input field filled with text 65898652
+18:30:17.579 INFO  CONTINUE button is clicked 
+18:30:19.641 INFO  Selecting shipping method
+18:30:19.699 INFO  Click continue
+18:30:21.756 INFO  Selecting payment method credit card
+18:30:21.788 INFO  Click continue
+18:30:26.861 INFO  Input card holder name
+18:30:27.971 INFO  Input card number
+18:30:29.050 INFO  Select card expiry day
+18:30:29.114 INFO  Select card expiry year
+18:30:30.166 INFO  Input card code
+18:30:31.222 INFO  Click continue
+18:30:34.274 INFO  Click order confirm button
+18:30:37.300 INFO  STEP: Order confirmation message is displayed
+18:30:37.306 INFO  'User should be able to successfully place order as a guest user' is successfully passed
+18:30:37.306 INFO  ---------------------------------------------------

@@ -18,6 +18,10 @@ public class AbstractComponent {
         WebDriverWait wait = new WebDriverWait(instanceDriver, Duration.ofSeconds(30));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(stringXpath)));
     }
+    public static WebElement waitUntilVisible(String stringXpath, String text){
+        WebDriverWait wait = new WebDriverWait(instanceDriver, Duration.ofSeconds(30));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format(stringXpath, text))));
+    }
     public static void waitUntilInvisible(String stringXpath){
         WebDriverWait wait = new WebDriverWait(instanceDriver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(stringXpath)));

@@ -6,7 +6,7 @@
         <listener class-name="TestComponents.ReportListeners"/>
         <listener class-name="TestComponents.AssertionListener"/>
     </listeners>
-    <test name="Nopcommerce">
+    <test name="Nopcommerce user registration">
         <classes>
             <class name="Tests.Testcases.UserRegistrationTest">
                 <methods>
@@ -15,11 +15,11 @@
             </class>
         </classes>
     </test>
-    <test name="Nopcommerce2">
+    <test name="Nopcommerce place order as guest">
         <classes>
             <class name="Tests.Testcases.PlaceOrderAsGuestTest">
                 <methods>
-                    <include name="testToVerifyRegistration1"/>
+                    <include name="testToVerifyPlaceOrderAsGuest"/>
                 </methods>
             </class>
         </classes>

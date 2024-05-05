@@ -6,7 +6,7 @@
         <listener class-name="TestComponents.ReportListeners"/>
         <listener class-name="TestComponents.AssertionListener"/>
     </listeners>
-    <test name="Nopcommerce">
+    <test name="docker parallel chrome">
         <parameter name="PBrowser" value="chrome"/>
         <classes>
             <class name="Tests.Testcases.UserRegistrationTest">
@@ -14,15 +14,41 @@
                     <include name="testToVerifyRegistration"/>
                 </methods>
             </class>
+            <class name="Tests.Testcases.PlaceOrderAsGuestTest">
+                <methods>
+                    <include name="testToVerifyPlaceOrderAsGuest"/>
+                </methods>
+            </class>
         </classes>
     </test>
-    <test name="Nopcommerce2">
+    <test name="docker parallel firefox">
         <parameter name="PBrowser" value="firefox"/>
 
         <classes>
+            <class name="Tests.Testcases.UserRegistrationTest">
+                <methods>
+                    <include name="testToVerifyRegistration"/>
+                </methods>
+            </class>
             <class name="Tests.Testcases.PlaceOrderAsGuestTest">
                 <methods>
-                    <include name="testToVerifyRegistration1"/>
+                    <include name="testToVerifyPlaceOrderAsGuest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="docker parallel edge">
+        <parameter name="PBrowser" value="edge"/>
+
+        <classes>
+            <class name="Tests.Testcases.UserRegistrationTest">
+                <methods>
+                    <include name="testToVerifyRegistration"/>
+                </methods>
+            </class>
+            <class name="Tests.Testcases.PlaceOrderAsGuestTest">
+                <methods>
+                    <include name="testToVerifyPlaceOrderAsGuest"/>
                 </methods>
             </class>
         </classes>

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -17,26 +18,25 @@ import static DataLoader.TestData.fieldsFilePath;
 
 public class Reader extends GenericWebPage {
 
-    private static String genderXpath = "//label[contains(text(),'%1s')]/following-sibling::div/span[@class='%2s']/input";
-    private static String inputXpath = "//label[contains(text(),'%s')]/following-sibling::input";
-    private static String dobSelectXpath = "//label[contains(text(),'%1s')]/following-sibling::div/select[@name='%2s']";
+    private final static String genderXpath = "//label[contains(text(),'%1s')]/following-sibling::div/span[@class='%2s']/input";
+    private final static String inputXpath = "//label[contains(text(),'%s')]/following-sibling::input";
+    private final static String dobSelectXpath = "//label[contains(text(),'%1s')]/following-sibling::div/select[@name='%2s']";
+    private final static String countrySelectXpath = "//label[contains(text(),'%s')]/following-sibling::select";
+    private final static String checkBoxXpath = "//label[contains(text(),'%s')]/following-sibling::input[@type='checkbox']";
+    private final static String buttonXpath = "//button[normalize-space()='%s']";
 
     public static String testDataCurrentRow;
 
     public static void fieldsFiller(String fieldsCSVFileName) {
 
-        Date date = new Date();
-        long time = date.getTime();
-        Timestamp timestamp = new Timestamp(time);
+        String timeStamp = new SimpleDateFormat("YYYYMMDDHHMMSS").format(new Date());
 
-        int counter = 0;
         String csvFilepath = fieldsFilePath + fieldsCSVFileName;
         List<CSVFields> csvFields = readCSVFieldsFromCSVFile(csvFilepath);
         for (int i = 1; i < csvFields.size(); i++) {
 
             String getTypeValue = csvFields.get(i).getType();
             String label = csvFields.get(i).getLabel();
-            //String currentTestDataValue = testDataCurrentRow.trim().split(",")[i - 1];
 
             String currentTestDataValue = testDataCurrentRow.trim()
                     .split(",")[TestData.getHeaderColumnIndex(csvFields.get(i).getLabel())];
@@ -45,8 +45,8 @@ public class Reader extends GenericWebPage {
 
                     case "Text": {
 
-                        if (csvFields.get(i).getAutoFill() == true) {
-                            currentTestDataValue = currentTestDataValue+timestamp;
+                        if (csvFields.get(i).getAutoFill()) {
+                            currentTestDataValue = currentTestDataValue+timeStamp;
                             fillTextField(inputXpath,label, currentTestDataValue);
                         }
                         else{
@@ -61,6 +61,29 @@ public class Reader extends GenericWebPage {
                     }
                     case "DOB": {
                         selectDateOfBirth(dobSelectXpath, label, currentTestDataValue);
+                        break;
+                    }
+                    case "email": {
+
+                        if (csvFields.get(i).getAutoFill()) {
+                            currentTestDataValue = currentTestDataValue+timeStamp;
+                            fillEmailField(inputXpath, label, currentTestDataValue);
+                        }
+                        else{
+                            fillEmailField(inputXpath, label, currentTestDataValue);
+                        }
+                        break;
+                    }
+                    case "checkbox": {
+                        checkBoxField(checkBoxXpath, label, currentTestDataValue);
+                        break;
+                    }
+                    case "button": {
+                        clickButton(buttonXpath, label, currentTestDataValue);
+                        break;
+                    }
+                    case "select": {
+                        selectField(countrySelectXpath, label, currentTestDataValue);
                         break;
                     }
 

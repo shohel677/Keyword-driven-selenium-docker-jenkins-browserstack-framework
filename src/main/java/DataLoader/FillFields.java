@@ -5,7 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.sql.Timestamp;
 import java.util.Arrays;
+import java.util.Date;
 
 import static AbstractComponents.AbstractComponent.waitForSeconds;
 
@@ -22,14 +24,42 @@ public class FillFields extends GenericWebPage {
 
         }
 
-        }
-
+    }
     public static void fillTextField(String xpath, String label, String value){
+
 
         WebElement input = instanceDriver.findElement(By.xpath(String.format(xpath, label)));
         clickClearAndType(input, value);
         logger.info(label+ " input field filled with text " + value);
 
+    }
+    public static void fillEmailField(String xpath, String label, String value){
+        value = value+ "@automation.com";
+        WebElement input = instanceDriver.findElement(By.xpath(String.format(xpath, label)));
+        clickClearAndType(input, value);
+        logger.info(label+ " input field filled with text " + value);
+
+    }
+    public static void clickButton(String xpath, String label, String value){
+
+        WebElement button = instanceDriver.findElement(By.xpath(String.format(xpath, value)));
+        button.click();
+        logger.info(label+ " button is clicked ");
+
+    }
+    public static void checkBoxField(String xpath, String label, String value){
+
+        WebElement checkbox = instanceDriver.findElement(By.xpath(String.format(xpath, label)));
+        if (value.equals("unchecked")){
+            checkbox.click();
+            waitForSeconds(1);
+            logger.info(label+" checkbox is unselected for the user");
+        }
+        else {
+            checkbox.isSelected();
+            logger.info(label+" checkbox is selected for the user");
+
+        }
     }
     public static void selectRadioButton(String xpath, String label, String value){
 
@@ -134,10 +164,16 @@ public class FillFields extends GenericWebPage {
 
     }
     private static void selectField(String xpath, String label, String namePropertyValue, String value){
-        WebElement genderRadioButton = instanceDriver.findElement(By.xpath(String.format(xpath, label, namePropertyValue)));
+        WebElement selectDropdown = instanceDriver.findElement(By.xpath(String.format(xpath, label, namePropertyValue)));
 
-        Select dobSelect = new Select(genderRadioButton);
-        dobSelect.selectByVisibleText(value);
+        Select optionSelect = new Select(selectDropdown);
+        optionSelect.selectByVisibleText(value);
+    }
+    public static void selectField(String xpath, String label, String value){
+        WebElement selectDropdown = instanceDriver.findElement(By.xpath(String.format(xpath, label)));
+
+        Select optionSelect = new Select(selectDropdown);
+        optionSelect.selectByVisibleText(value);
     }
     private static void clickClearAndType(WebElement input, String value){
         input.isDisplayed();

@@ -6,9 +6,9 @@
         <listener class-name="TestComponents.ReportListeners"/>
         <listener class-name="TestComponents.AssertionListener"/>
     </listeners>
-    <test name="Nopcommerce user registration">
+    <test name="Nopcommerce place order as guest">
     <classes>
-        <class name="Tests.Testcases.UserRegistrationTest" />
+        <class name="Tests.Testcases.PlaceOrderAsGuestTest" />
     </classes>
     </test>
 </suite>
