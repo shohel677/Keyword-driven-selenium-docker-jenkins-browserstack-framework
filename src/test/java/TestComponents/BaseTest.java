@@ -45,7 +45,6 @@ public class BaseTest {
 
         getInstanceDriver(testOnBrowser, testOnPlatform);
         initialPage = new InitialPage();
-        //testSteps = new TestSteps();
         logger.info("Starting testcase: "+method.getName());
         initialPage.appAccess(appAddress);
     }

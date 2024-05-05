@@ -24,7 +24,7 @@ public class HomePage extends GenericWebPage {
 
     }
     private final static String nopCommerceLogo = "//a/img[@alt='%s']";
-    private final static String registerButton = "//a[text()='']";
+    private final static String registerButton = "//a[text()='%s']";
     private final static String categoryXpath = "//div[@class='header-menu']/ul[contains(@class, 'notmobile')]/li/a[normalize-space()='%s']";
     private final static String categoryOptionXpath = "//div[@class='header-menu']/ul[contains(@class, 'notmobile')]/li/a[normalize-space()='%1s']/following-sibling::ul//a[contains(text(), '%2s')]";
 
