@@ -42,12 +42,10 @@ public class ReportListeners extends BaseTest implements ITestListener{
 		extentTest.get().fail(result.getThrowable());//
 
 		try {
-			instanceDriver = (WebDriver) result.getTestClass().getRealClass().getField("driver")
-					.get(result.getInstance());
-
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			instanceDriver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("instanceDriver").get(result.getInstance());
+		} catch (NoSuchFieldException | IllegalAccessException e) {
+			// Handle the exception
+			e.printStackTrace();
 		}
 		String filePath = null;
 		try {
