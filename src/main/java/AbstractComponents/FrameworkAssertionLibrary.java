@@ -25,7 +25,7 @@ public class FrameworkAssertionLibrary extends GenericWebPage{
         }
         else{
             assertions.add(new AssertionInfo(false, actual));
-            Assert.assertTrue(false, actual);
+            Assert.fail(actual);
             logger.info("Step: " + actual);
         }
 

@@ -1,9 +1,5 @@
 package DataLoader;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

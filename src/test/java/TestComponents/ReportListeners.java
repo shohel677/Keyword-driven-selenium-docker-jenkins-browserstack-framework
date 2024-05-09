@@ -1,6 +1,7 @@
 package TestComponents;
 
 import AbstractComponents.FrameworkAssertionLibrary;
+import AbstractComponents.GenericWebPage;
 import Utils.ExtentReporterNG;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -41,12 +42,6 @@ public class ReportListeners extends BaseTest implements ITestListener{
 		assertionAdd().clear();
 		extentTest.get().fail(result.getThrowable());//
 
-		try {
-			instanceDriver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("instanceDriver").get(result.getInstance());
-		} catch (NoSuchFieldException | IllegalAccessException e) {
-			// Handle the exception
-			e.printStackTrace();
-		}
 		String filePath = null;
 		try {
 			filePath = getScreenshot(result.getMethod().getMethodName(),instanceDriver);
