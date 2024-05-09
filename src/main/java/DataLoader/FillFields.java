@@ -5,10 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.sql.Timestamp;
-import java.util.Arrays;
-import java.util.Date;
-
 import static AbstractComponents.AbstractComponent.waitForSeconds;
 
 public class FillFields extends GenericWebPage {
@@ -17,7 +13,7 @@ public class FillFields extends GenericWebPage {
         birthMonth("DateOfBirthMonth"),
         birthYear("DateOfBirthYear");
 
-        private String name;
+        private final String name;
 
          dobSelectNameProperty(String name) {
             this.name = name;

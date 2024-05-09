@@ -15,7 +15,7 @@ public class HomePage extends GenericWebPage {
         category("Electronics"),
         categoryOption("Cell phones");
 
-        private String text;
+        private final String text;
 
         homeText(String text) {
             this.text = text;
