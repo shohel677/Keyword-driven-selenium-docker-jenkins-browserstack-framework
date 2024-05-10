@@ -3,7 +3,7 @@ This project is a comprehensive automation testing framework built in Java, util
 
 ### Key Features:
 
-1. Modular Architecture: The framework follows a modular architecture, leveraging the Page Object Model (POM) design pattern for improved code maintainability and readability.
+1. Page object model: The Page Object Model (POM) design pattern for improved code maintainability and readability.
 2. TestNG Integration: TestNG is used as the testing framework, providing features such as annotations for test execution control, parallel execution support, and reporting capabilities.
 3. Cross-Browser Testing with BrowserStack: Integration with BrowserStack allows for automated testing across various browsers and devices, ensuring broad compatibility and coverage.
 4. Docker Support: The framework is Dockerized, enabling easy setup and execution of tests in Docker containers. This facilitates consistent testing environments and scalability.
