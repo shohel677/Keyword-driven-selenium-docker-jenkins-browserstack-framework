@@ -4,8 +4,6 @@ import AbstractComponents.GenericWebPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
 import static AbstractComponents.AbstractComponent.waitUntilVisible;
 
 public class ProductsDetailsPage extends GenericWebPage {

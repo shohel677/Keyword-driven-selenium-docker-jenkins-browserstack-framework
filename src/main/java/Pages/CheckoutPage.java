@@ -16,6 +16,8 @@ public class CheckoutPage extends GenericWebPage {
     private enum inputText{
         cardHolderName("Cardholder name"),
         cardNumber("Card number"),
+        continueText("Continue"),
+        confirm("Confirm"),
         cardCode("Card code");
         private String text;
 
@@ -34,15 +36,15 @@ public class CheckoutPage extends GenericWebPage {
     String formattedYear = String.format("%04d", yearTwoYearsLater);
     private final static String shippingMethodXpath = "//label[contains(text(),'Next Day Air')]/preceding-sibling::input";
     private final static String cardSelectXpath = "//label[contains(text(),'Credit Card')]/preceding-sibling::input";
-    private final static String continueXpath = "//div[@id='%s']//button[text()='Continue']";
+    private final static String continueXpath = "//div[@id='1%s']//button[text()='2%s']";
     private final static String paymentInputXpath = "//label[contains(text(), '%s')]/parent::td/following-sibling::td/input";
     private final static String selectXpath = "//select[@id='%s']";
-    private final static String orderConfirmXpath = "//button[text()='Confirm']";
+    private final static String orderConfirmXpath = "//button[text()='%s']";
 
 
 
     private WebElement orderConfirm(){
-        return instanceDriver.findElement(By.xpath(orderConfirmXpath));
+        return instanceDriver.findElement(By.xpath(String.format(orderConfirmXpath, inputText.confirm.text)));
     }
     private WebElement monthSelect(){
         return instanceDriver.findElement(By.xpath(String.format(selectXpath, "ExpireMonth")));
@@ -66,13 +68,13 @@ public class CheckoutPage extends GenericWebPage {
         return instanceDriver.findElement(By.xpath(cardSelectXpath));
     }
     private WebElement shippingContinue(){
-        return instanceDriver.findElement(By.xpath(String.format(continueXpath, "shipping-method-buttons-container")));
+        return instanceDriver.findElement(By.xpath(String.format(continueXpath, "shipping-method-buttons-container", inputText.continueText.text)));
     }
     private WebElement paymentContinue(){
-        return instanceDriver.findElement(By.xpath(String.format(continueXpath, "payment-method-buttons-container")));
+        return instanceDriver.findElement(By.xpath(String.format(continueXpath, "payment-method-buttons-container", inputText.continueText.text)));
     }
     private WebElement cardContinue(){
-        return instanceDriver.findElement(By.xpath(String.format(continueXpath, "payment-info-buttons-container")));
+        return instanceDriver.findElement(By.xpath(String.format(continueXpath, "payment-info-buttons-container", inputText.continueText.text)));
     }
 
     public void selectShippingMethodAndContinue(){

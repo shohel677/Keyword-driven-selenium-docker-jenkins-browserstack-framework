@@ -13,12 +13,12 @@ import static DataLoader.Reader.fieldsFiller;
 
 public class PlaceOrderAsGuestSteps extends BaseTest {
 
-    HomePage homePage = new HomePage();
-    ProductsPage productsPage = new ProductsPage();
-    ProductsDetailsPage productsDetailsPage = new ProductsDetailsPage();
-    ShoppingCartPage shoppingCartPage = new ShoppingCartPage();
-    CheckoutPage checkoutPage = new CheckoutPage();
-    ThankYouPage thankYouPage = new ThankYouPage();
+    private final HomePage homePage = new HomePage();
+    private final ProductsPage productsPage = new ProductsPage();
+    private final ProductsDetailsPage productsDetailsPage = new ProductsDetailsPage();
+    private final ShoppingCartPage shoppingCartPage = new ShoppingCartPage();
+    private final CheckoutPage checkoutPage = new CheckoutPage();
+    private final ThankYouPage thankYouPage = new ThankYouPage();
 
     @Given("User go to the NopCommerce Home page")
     public void userGoToTheNopCommerceHomePage() {

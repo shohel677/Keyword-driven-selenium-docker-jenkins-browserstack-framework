@@ -14,8 +14,8 @@ import static DataLoader.Reader.fieldsFiller;
 
 public class UserRegistrationSteps extends BaseTest {
 
-    HomePage homePage = new HomePage();
-    RegisterPage registerPage = new RegisterPage();
+    private final HomePage homePage = new HomePage();
+    private final RegisterPage registerPage = new RegisterPage();
 
     @Given("User go to the NopCommerce Home page")
     public void userGoesToNopCommerceHomePage() {

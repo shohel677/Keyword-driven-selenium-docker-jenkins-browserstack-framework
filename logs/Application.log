@@ -1,10 +1,186 @@
-19:29:28.238 INFO  Starting testcase: testToVerifyRegistration
-19:29:30.939 INFO  Open URL: https://demo.nopcommerce.com/
-19:29:31.188 INFO  STEP: User landed on NopCommerce homepage
-19:29:31.804 INFO  user clicked on register button
-19:30:01.991 INFO  'Nopcommerce registration feature Test' failed
-19:30:01.991 INFO  ---------------------------------------------------
-19:30:03.316 INFO  Starting testcase: testToVerifyRegistration
-19:30:04.054 INFO  Open URL: https://demo.nopcommerce.com/
-19:30:04.301 INFO  STEP: User landed on NopCommerce homepage
-19:30:05.577 INFO  user clicked on register button
+17:43:17.645 INFO  Starting testcase: testToVerifyRegistration
+17:43:20.707 INFO  Open URL: https://demo.nopcommerce.com/
+17:43:20.842 INFO  STEP: User landed on NopCommerce homepage
+17:43:21.768 INFO  user clicked on register button
+17:43:21.866 INFO  STEP: User landed on NopCommerce registration page
+17:43:21.939 INFO  Gender selected: Male
+17:43:22.955 INFO  STEP: Gender field is selected
+17:43:24.088 INFO  First name input field filled with text Anthony
+17:43:25.211 INFO  Last name input field filled with text Abraham
+17:43:25.212 INFO  STEP: Entered user last name and first name field
+17:43:25.295 INFO  Selected birthday: 20
+17:43:25.356 INFO  Selected birth month: May
+17:43:26.444 INFO  Selected birth year: 1995
+17:43:27.449 INFO  STEP: User date of birth is selected
+17:43:28.659 INFO  Email input field filled with text email2024051311705450@automation.com
+17:43:28.659 INFO  STEP: User email is entered
+17:43:29.851 INFO  Company name input field filled with text Abc company-23
+17:43:29.852 INFO  STEP: Company name of user is set
+17:43:29.881 INFO  Newsletter checkbox is selected for the user
+17:43:29.882 INFO  STEP: Newsletter status is set
+17:43:31.060 INFO  Password input field filled with text pass@1234
+17:43:32.247 INFO  Confirm password input field filled with text pass@1234
+17:43:32.248 INFO  STEP: Entered value on Password and confirm password field
+17:43:32.952 INFO  REGISTER button is clicked 
+17:43:32.954 INFO  STEP: user register button is clicked
+17:43:33.000 INFO  STEP: Registration confirmation message is displayed
+17:43:33.006 INFO  'Nopcommerce registration feature Test' is successfully passed
+17:43:33.006 INFO  ---------------------------------------------------
+17:43:34.086 INFO  Starting testcase: testToVerifyRegistration
+17:43:35.281 INFO  Open URL: https://demo.nopcommerce.com/
+17:43:35.454 INFO  STEP: User landed on NopCommerce homepage
+17:43:35.924 INFO  user clicked on register button
+17:43:35.979 INFO  STEP: User landed on NopCommerce registration page
+17:43:36.049 INFO  Gender selected: Female
+17:43:37.059 INFO  STEP: Gender field is selected
+17:43:38.211 INFO  First name input field filled with text Alexandra
+17:43:39.407 INFO  Last name input field filled with text Allan
+17:43:39.407 INFO  STEP: Entered user last name and first name field
+17:43:39.497 INFO  Selected birthday: 9
+17:43:39.555 INFO  Selected birth month: May
+17:43:40.622 INFO  Selected birth year: 1999
+17:43:41.627 INFO  STEP: User date of birth is selected
+17:43:42.862 INFO  Email input field filled with text email2024051311705628@automation.com
+17:43:42.862 INFO  STEP: User email is entered
+17:43:44.008 INFO  Company name input field filled with text Abc company-23
+17:43:44.008 INFO  STEP: Company name of user is set
+17:43:45.062 INFO  Newsletter checkbox is unselected for the user
+17:43:45.062 INFO  STEP: Newsletter status is set
+17:43:46.260 INFO  Password input field filled with text pass@1234
+17:43:47.392 INFO  Confirm password input field filled with text pass@1234
+17:43:47.392 INFO  STEP: Entered value on Password and confirm password field
+17:43:48.074 INFO  REGISTER button is clicked 
+17:43:48.075 INFO  STEP: user register button is clicked
+17:43:48.136 INFO  STEP: Registration confirmation message is displayed
+17:43:48.138 INFO  'Nopcommerce registration feature Test' is successfully passed
+17:43:48.138 INFO  ---------------------------------------------------
+17:43:49.092 INFO  Starting testcase: testToVerifyRegistration
+17:43:50.380 INFO  Open URL: https://demo.nopcommerce.com/
+17:43:50.471 INFO  STEP: User landed on NopCommerce homepage
+17:43:50.918 INFO  user clicked on register button
+17:43:50.974 INFO  STEP: User landed on NopCommerce registration page
+17:43:51.041 INFO  Gender selected: Female
+17:43:52.048 INFO  STEP: Gender field is selected
+17:43:53.185 INFO  First name input field filled with text Alison
+17:43:54.369 INFO  Last name input field filled with text Alsop
+17:43:54.370 INFO  STEP: Entered user last name and first name field
+17:43:54.446 INFO  Selected birthday: 3
+17:43:54.515 INFO  Selected birth month: May
+17:43:55.600 INFO  Selected birth year: 2000
+17:43:56.610 INFO  STEP: User date of birth is selected
+17:43:57.808 INFO  Email input field filled with text email2024051311705611@automation.com
+17:43:57.809 INFO  STEP: User email is entered
+17:43:58.938 INFO  Company name input field filled with text Abc company-23
+17:43:58.939 INFO  STEP: Company name of user is set
+17:44:00.007 INFO  Newsletter checkbox is unselected for the user
+17:44:00.007 INFO  STEP: Newsletter status is set
+17:44:01.187 INFO  Password input field filled with text pass@1234
+17:44:02.321 INFO  Confirm password input field filled with text pass@1234
+17:44:02.321 INFO  STEP: Entered value on Password and confirm password field
+17:44:03.153 INFO  REGISTER button is clicked 
+17:44:03.153 INFO  STEP: user register button is clicked
+17:44:03.228 INFO  STEP: Registration confirmation message is displayed
+17:44:03.229 INFO  'Nopcommerce registration feature Test' is successfully passed
+17:44:03.230 INFO  ---------------------------------------------------
+17:44:04.223 INFO  Starting testcase: testToVerifyRegistration
+17:44:05.519 INFO  Open URL: https://demo.nopcommerce.com/
+17:44:05.630 INFO  STEP: User landed on NopCommerce homepage
+17:44:06.169 INFO  user clicked on register button
+17:44:06.222 INFO  STEP: User landed on NopCommerce registration page
+17:44:06.297 INFO  Gender selected: Male
+17:44:07.299 INFO  STEP: Gender field is selected
+17:44:08.453 INFO  First name input field filled with text Amanda
+17:44:09.606 INFO  Last name input field filled with text Anderson
+17:44:09.607 INFO  STEP: Entered user last name and first name field
+17:44:09.676 INFO  Selected birthday: 2
+17:44:09.732 INFO  Selected birth month: May
+17:44:10.811 INFO  Selected birth year: 2001
+17:44:11.811 INFO  STEP: User date of birth is selected
+17:44:13.053 INFO  Email input field filled with text email2024051311705812@automation.com
+17:44:13.054 INFO  STEP: User email is entered
+17:44:14.215 INFO  Company name input field filled with text Abc company-23
+17:44:14.215 INFO  STEP: Company name of user is set
+17:44:14.230 INFO  Newsletter checkbox is selected for the user
+17:44:14.230 INFO  STEP: Newsletter status is set
+17:44:15.345 INFO  Password input field filled with text pass@1234
+17:44:16.476 INFO  Confirm password input field filled with text pass@1234
+17:44:16.476 INFO  STEP: Entered value on Password and confirm password field
+17:44:17.150 INFO  REGISTER button is clicked 
+17:44:17.150 INFO  STEP: user register button is clicked
+17:44:17.203 INFO  STEP: Registration confirmation message is displayed
+17:44:17.204 INFO  'Nopcommerce registration feature Test' is successfully passed
+17:44:17.204 INFO  ---------------------------------------------------
+17:44:18.099 INFO  Starting testcase: testToVerifyRegistration
+17:44:20.369 INFO  Open URL: https://demo.nopcommerce.com/
+17:44:20.490 INFO  STEP: User landed on NopCommerce homepage
+17:44:21.204 INFO  user clicked on register button
+17:44:21.257 INFO  STEP: User landed on NopCommerce registration page
+17:44:21.329 INFO  Gender selected: Female
+17:44:22.334 INFO  STEP: Gender field is selected
+17:44:23.456 INFO  First name input field filled with text Austin
+17:44:24.589 INFO  Last name input field filled with text Arnold
+17:44:24.590 INFO  STEP: Entered user last name and first name field
+17:44:24.659 INFO  Selected birthday: 10
+17:44:24.714 INFO  Selected birth month: May
+17:44:25.789 INFO  Selected birth year: 1990
+17:44:26.799 INFO  STEP: User date of birth is selected
+17:44:28.062 INFO  Email input field filled with text email2024051311705800@automation.com
+17:44:28.063 INFO  STEP: User email is entered
+17:44:29.207 INFO  Company name input field filled with text Abc company-23
+17:44:29.207 INFO  STEP: Company name of user is set
+17:44:30.255 INFO  Newsletter checkbox is unselected for the user
+17:44:30.255 INFO  STEP: Newsletter status is set
+17:44:31.420 INFO  Password input field filled with text pass@1234
+17:44:32.594 INFO  Confirm password input field filled with text pass@1234
+17:44:32.596 INFO  STEP: Entered value on Password and confirm password field
+17:44:33.264 INFO  REGISTER button is clicked 
+17:44:33.264 INFO  STEP: user register button is clicked
+17:44:33.322 INFO  STEP: Registration confirmation message is displayed
+17:44:33.323 INFO  'Nopcommerce registration feature Test' is successfully passed
+17:44:33.323 INFO  ---------------------------------------------------
+17:44:34.584 INFO  Starting testcase: testToVerifyPlaceOrderAsGuest
+17:44:35.276 INFO  Open URL: https://demo.nopcommerce.com/
+17:44:35.402 INFO  STEP: User landed on NopCommerce homepage
+17:44:36.255 INFO  Clicking cell phones category option
+17:44:39.260 INFO  STEP: User click Cell phones option from Electronics category
+17:44:39.899 INFO  Click on Nokia Lumia 1020 for details page
+17:44:39.900 INFO  STEP: User click on the Nokia Lumia 1020 for product details
+17:44:40.108 INFO  Enter quantity of product
+17:44:40.108 INFO  STEP: User set the quantity number 2 in the quantity field
+17:44:40.157 INFO  Click add to cart button
+17:44:40.157 INFO  STEP: User click on the ADD TO CART button
+17:44:41.184 INFO  Navigating to shopping cart
+17:44:41.184 INFO  STEP: User go to the shipping cart page
+17:44:41.269 INFO  Accept terms and condition
+17:44:42.419 INFO  Click checkout button
+17:44:42.420 INFO  STEP: Accept terms and condition and click checkout button
+17:44:43.067 INFO  Click checkout as guest button
+17:44:43.067 INFO  STEP: Click checkout as guest button
+17:44:49.231 INFO  First name input field filled with text Alla
+17:44:50.351 INFO  Last name input field filled with text Donald
+17:44:51.579 INFO  Email input field filled with text email202405131170568@automation.com
+17:44:52.710 INFO  Company input field filled with text ABC Ltd
+17:44:53.894 INFO  City input field filled with text Dhaka
+17:44:55.048 INFO  Address 1 input field filled with text 45 demo street
+17:44:56.155 INFO  Zip / postal code input field filled with text 1200
+17:44:57.275 INFO  Phone number input field filled with text 65898652
+17:44:57.320 INFO  CONTINUE button is clicked 
+17:44:57.320 INFO  STEP: Enter details for shipping
+17:44:59.375 INFO  Selecting shipping method
+17:44:59.424 INFO  Click continue
+17:44:59.424 INFO  STEP: Select next day air shipping method
+17:45:01.498 INFO  Selecting payment method credit card
+17:45:01.530 INFO  Click continue
+17:45:01.530 INFO  STEP: Select card for payment method
+17:45:06.604 INFO  Input card holder name
+17:45:07.716 INFO  Input card number
+17:45:08.783 INFO  Select card expiry day
+17:45:08.833 INFO  Select card expiry year
+17:45:09.884 INFO  Input card code
+17:45:10.926 INFO  Click continue
+17:45:10.926 INFO  STEP: Visa card information added
+17:45:13.967 INFO  Click order confirm button
+17:45:13.967 INFO  STEP: Confirm button clicked for place order
+17:45:17.002 INFO  STEP: Order confirmation message is displayed
+17:45:17.004 INFO  'User should be able to successfully place order as a guest user' is successfully passed
+17:45:17.004 INFO  ---------------------------------------------------
