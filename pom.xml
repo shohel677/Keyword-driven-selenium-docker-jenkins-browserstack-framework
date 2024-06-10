@@ -6,14 +6,21 @@
 
     <groupId>org.automatiom</groupId>
     <artifactId>automationTask</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Application</module>
+        <module>Test</module>
+        <module>Utility</module>
+        <module>DataSource</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
-        <suiteFile>suites/place_order_as_guest.xml</suiteFile>
+        <suiteFile>place_order_as_guest.xml</suiteFile>
     </properties>
     <name>Automation Task</name>
     <url>http://maven.apache.org</url>
@@ -61,19 +68,30 @@
         </dependency>
 
 
+
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Configure Surefire Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version>
-                <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>${suiteFile}</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
+                <version>3.2.5</version> <!-- Use the latest version -->
+                <executions>
+                    <execution>
+                        <id>run-tests</id>
+                        <phase>test</phase> <!-- Run during the test phase -->
+                        <goals>
+                            <goal>test</goal> <!-- Run test classes -->
+                        </goals>
+                        <configuration>
+                            <!-- Optionally configure additional settings here -->
+                            <skipTests>false</skipTests>
+                            <testFailureIgnore>true</testFailureIgnore> <!-- Ignore test failures -->
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

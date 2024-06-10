@@ -1,7 +1,0 @@
-Tests\Testcases\PlaceOrderAsGuestTest.class
-TestComponents\BaseTest.class
-TestComponents\SuiteListener.class
-Tests\Testcases\UserRegistrationTest.class
-TestComponents\AssertionListener.class
-TestComponents\ReportListeners.class
-Tests\Steps\UserRegistrationSteps.class

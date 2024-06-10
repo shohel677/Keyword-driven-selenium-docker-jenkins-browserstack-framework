@@ -7,8 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="automationTask" />
+        <module name="Utility" />
+        <module name="Application" />
+        <module name="Test" />
+        <module name="DataSource" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Data Management" target="11" />
+      <module name="Independent" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite  parallel = "tests"  name="UI">
+    <listeners>
+        <listener class-name="TestComponents.SuiteListener" />
+        <listener class-name="TestComponents.ReportListeners"/>
+        <listener class-name="TestComponents.AssertionListener"/>
+    </listeners>
+    <test name="Nopcommerce place order as guest">
+    <classes>
+        <class name="Tests.Testcases.PlaceOrderAsGuestTest">
+            <methods>
+                <include name="testToVerifyPlaceOrderAsGuest" />
+            </methods>
+        </class>
+    </classes>
+    </test>
+</suite>
