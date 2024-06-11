@@ -1,8 +1,8 @@
-D:\Shohel\DockerFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\testComponents\BaseTest.java
-D:\Shohel\DockerFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\testComponents\ReportListeners.java
-D:\Shohel\DockerFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\tests\testcases\PlaceOrderAsGuestTest.java
-D:\Shohel\DockerFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\testComponents\SuiteListener.java
-D:\Shohel\DockerFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\tests\testcases\UserRegistrationTest.java
-D:\Shohel\DockerFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\tests\steps\PlaceOrderAsGuestSteps.java
-D:\Shohel\DockerFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\testComponents\AssertionListener.java
-D:\Shohel\DockerFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\tests\steps\UserRegistrationSteps.java
+D:\Shohel\modularFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\testComponents\ReportListeners.java
+D:\Shohel\modularFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\tests\steps\PlaceOrderAsGuestSteps.java
+D:\Shohel\modularFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\tests\testcases\PlaceOrderAsGuestTest.java
+D:\Shohel\modularFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\testComponents\AssertionListener.java
+D:\Shohel\modularFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\testComponents\SuiteListener.java
+D:\Shohel\modularFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\tests\testcases\UserRegistrationTest.java
+D:\Shohel\modularFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\tests\steps\UserRegistrationSteps.java
+D:\Shohel\modularFramework\Keyword-driven-selenium-docker-jenkins-browserstack-framework\Test\src\test\java\testComponents\BaseTest.java

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 35.12 s <<< FAILURE! -- in TestSuite
-tests.testcases.PlaceOrderAsGuestTest.testToVerifyPlaceOrderAsGuest[Alla,Donald,email,ABC Ltd,Bangladesh,Dhaka,45 demo street,1200,65898652,Continue, org.testng.TestRunner@7cd8ca34](1) -- Time elapsed: 27.70 s <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 32.72 s <<< FAILURE! -- in TestSuite
+tests.testcases.PlaceOrderAsGuestTest.testToVerifyPlaceOrderAsGuest[Alla,Donald,email,ABC Ltd,Bangladesh,Dhaka,45 demo street,1200,65898652,Continue, org.testng.TestRunner@f3b7c11](1) -- Time elapsed: 25.95 s <<< FAILURE!
 java.lang.AssertionError: Select next day air shipping method expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)

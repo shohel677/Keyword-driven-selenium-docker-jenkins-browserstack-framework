@@ -86,8 +86,8 @@ public class ReportListeners extends BaseTest implements ITestListener{
 	public String getScreenshot(String testCaseName, WebDriver instanceDriver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot)instanceDriver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir") +File.separator+ "reports" +File.separator+ testCaseName + ".png");
+		File file = new File(System.getProperty("user.dir").replace("Test", "Utility") +File.separator+ "reports" +File.separator+ testCaseName + ".png");
 		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir") + File.separator +"reports" + File.separator + testCaseName + ".png";
+		return System.getProperty("user.dir").replace("Test","Utility") + File.separator +"reports" + File.separator + testCaseName + ".png";
 	}
 }

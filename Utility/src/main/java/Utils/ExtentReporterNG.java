@@ -10,7 +10,8 @@ public class ExtentReporterNG {
 	
 	public static ExtentReports getReportObject()
 	{
-		String path =System.getProperty("user.dir")+ File.separator+"reports"+ File.separator+"report.html";
+		String utilityModule = "Utility"+ File.separator+"reports"+ File.separator+"report.html";
+		String path =System.getProperty("user.dir").replace("Test", utilityModule);
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 		reporter.config().setReportName("Report");
 		reporter.config().setDocumentTitle("Test Results");

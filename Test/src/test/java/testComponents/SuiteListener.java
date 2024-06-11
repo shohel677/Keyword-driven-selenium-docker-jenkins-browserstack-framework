@@ -9,8 +9,8 @@ public class SuiteListener implements ISuiteListener {
 
     @Override
     public void onStart(ISuite suite) {
+        String reportsFolderPath =System.getProperty("user.dir").replace("Test", "Utility")+ File.separator+"reports";
 
-        String reportsFolderPath = System.getProperty("user.dir") +File.separator+"reports";
         String AllureReportsFolderPath = System.getProperty("user.dir") +File.separator+"allure-results";
 
         deleteFolderContents(new File(reportsFolderPath));
