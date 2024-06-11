@@ -1,73 +1,31 @@
-03:38:02.667 INFO  Starting testcase: testToVerifyPlaceOrderAsGuest
-03:38:03.949 INFO  Open URL: https://demo.nopcommerce.com/
-03:38:04.150 INFO  STEP: User landed on NopCommerce homepage
-03:38:04.930 INFO  Clicking cell phones category option
-03:38:07.943 INFO  STEP: User click Cell phones option from Electronics category
-03:38:08.523 INFO  Click on Nokia Lumia 1020 for details page
-03:38:08.523 INFO  STEP: User click on the Nokia Lumia 1020 for product details
-03:38:08.804 INFO  Enter quantity of product
-03:38:08.805 INFO  STEP: User set the quantity number 2 in the quantity field
-03:38:08.870 INFO  Click add to cart button
-03:38:08.871 INFO  STEP: User click on the ADD TO CART button
-03:38:09.937 INFO  Navigating to shopping cart
-03:38:09.937 INFO  STEP: User go to the shipping cart page
-03:38:10.037 INFO  Accept terms and condition
-03:38:10.770 INFO  Click checkout button
-03:38:10.770 INFO  STEP: Accept terms and condition and click checkout button
-03:38:11.496 INFO  Click checkout as guest button
-03:38:11.499 INFO  STEP: Click checkout as guest button
-03:38:17.650 INFO  First name input field filled with text Alla
-03:38:18.867 INFO  Last name input field filled with text Donald
-03:38:20.161 INFO  Email input field filled with text email2024061630306500@automation.com
-03:38:21.325 INFO  Company input field filled with text ABC Ltd
-03:38:22.585 INFO  City input field filled with text Dhaka
-03:38:23.755 INFO  Address 1 input field filled with text 45 demo street
-03:38:24.886 INFO  Zip / postal code input field filled with text 1200
-03:38:26.060 INFO  Phone number input field filled with text 65898652
-03:38:26.114 INFO  CONTINUE button is clicked 
-03:38:26.115 INFO  STEP: Enter details for shipping
-03:38:28.207 INFO  Selecting shipping method
-03:38:28.239 INFO  'User should be able to successfully place order as a guest user' failed
-03:38:28.239 INFO  ---------------------------------------------------
-03:38:30.474 INFO  Starting testcase: testToVerifyRegistration
-03:38:31.764 INFO  Open URL: https://demo.nopcommerce.com/
-03:38:31.958 INFO  STEP: User landed on NopCommerce homepage
-03:38:32.415 INFO  user clicked on register button
-03:38:32.460 INFO  STEP: User landed on NopCommerce registration page
-03:38:32.531 INFO  Gender selected: Male
-03:38:33.534 INFO  STEP: Gender field is selected
-03:38:34.681 INFO  First name input field filled with text Anthony
-03:38:35.849 INFO  Last name input field filled with text Abraham
-03:38:35.849 INFO  STEP: Entered user last name and first name field
-03:38:35.964 INFO  Selected birthday: 20
-03:38:36.046 INFO  Selected birth month: May
-03:38:37.139 INFO  Selected birth year: 1995
-03:38:38.143 INFO  STEP: User date of birth is selected
-03:38:39.380 INFO  Email input field filled with text email2024061630306144@automation.com
-03:38:39.380 INFO  STEP: User email is entered
-03:38:40.564 INFO  Company name input field filled with text Abc company-23
-03:38:40.564 INFO  STEP: Company name of user is set
-03:38:40.591 INFO  Newsletter checkbox is selected for the user
-03:38:40.591 INFO  STEP: Newsletter status is set
-03:38:41.823 INFO  Password input field filled with text pass@1234
-03:38:43.017 INFO  Confirm password input field filled with text pass@1234
-03:38:43.017 INFO  STEP: Entered value on Password and confirm password field
-03:38:43.755 INFO  REGISTER button is clicked 
-03:38:43.755 INFO  STEP: user register button is clicked
-03:38:43.832 INFO  STEP: Registration confirmation message is displayed
-03:38:43.834 INFO  'Nopcommerce registration feature Test' is successfully passed
-03:38:43.835 INFO  ---------------------------------------------------
-03:38:45.029 INFO  Starting testcase: testToVerifyRegistration
-03:38:46.335 INFO  Open URL: https://demo.nopcommerce.com/
-03:38:46.505 INFO  STEP: User landed on NopCommerce homepage
-03:38:46.943 INFO  user clicked on register button
-03:38:46.993 INFO  STEP: User landed on NopCommerce registration page
-03:38:47.071 INFO  Gender selected: Female
-03:38:48.086 INFO  STEP: Gender field is selected
-03:38:49.272 INFO  First name input field filled with text Alexandra
-03:38:50.471 INFO  Last name input field filled with text Allan
-03:38:50.471 INFO  STEP: Entered user last name and first name field
-03:38:50.570 INFO  Selected birthday: 9
-03:38:50.656 INFO  Selected birth month: May
-03:38:51.749 INFO  Selected birth year: 1999
-03:38:52.755 INFO  STEP: User date of birth is selected
+16:35:21.558 INFO  Starting testcase: testToVerifyPlaceOrderAsGuest
+16:35:24.281 INFO  Open URL: https://demo.nopcommerce.com/
+16:35:24.548 INFO  STEP: User landed on NopCommerce homepage
+16:35:27.124 INFO  Clicking cell phones category option
+16:35:30.137 INFO  STEP: User click Cell phones option from Electronics category
+16:35:31.163 INFO  Click on Nokia Lumia 1020 for details page
+16:35:31.163 INFO  STEP: User click on the Nokia Lumia 1020 for product details
+16:35:31.379 INFO  Enter quantity of product
+16:35:31.379 INFO  STEP: User set the quantity number 2 in the quantity field
+16:35:31.442 INFO  Click add to cart button
+16:35:31.442 INFO  STEP: User click on the ADD TO CART button
+16:35:33.209 INFO  Navigating to shopping cart
+16:35:33.209 INFO  STEP: User go to the shipping cart page
+16:35:33.359 INFO  Accept terms and condition
+16:35:34.247 INFO  Click checkout button
+16:35:34.247 INFO  STEP: Accept terms and condition and click checkout button
+16:35:35.127 INFO  Click checkout as guest button
+16:35:35.127 INFO  STEP: Click checkout as guest button
+16:35:41.286 INFO  First name input field filled with text Alla
+16:35:42.525 INFO  Last name input field filled with text Donald
+16:35:43.736 INFO  Email input field filled with text email2024061631606134@automation.com
+16:35:44.946 INFO  Company input field filled with text ABC Ltd
+16:35:46.225 INFO  City input field filled with text Dhaka
+16:35:47.379 INFO  Address 1 input field filled with text 45 demo street
+16:35:48.523 INFO  Zip / postal code input field filled with text 1200
+16:35:49.684 INFO  Phone number input field filled with text 65898652
+16:35:49.770 INFO  CONTINUE button is clicked 
+16:35:49.770 INFO  STEP: Enter details for shipping
+16:35:51.872 INFO  Selecting shipping method
+16:35:52.086 INFO  'User should be able to successfully place order as a guest user' failed
+16:35:52.086 INFO  ---------------------------------------------------

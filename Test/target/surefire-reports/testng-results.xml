@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-11T16:35:19 BDT" name="UI" finished-at="2024-06-11T16:35:52 BDT" duration-ms="32642">
+    <groups>
+    </groups>
+    <test started-at="2024-06-11T16:35:19 BDT" name="Nopcommerce place order as guest" finished-at="2024-06-11T16:35:52 BDT" duration-ms="32642">
+      <class name="tests.testcases.PlaceOrderAsGuestTest">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method,java.lang.String,java.lang.String)[pri:0, instance:tests.testcases.PlaceOrderAsGuestTest@f325091]" started-at="2024-06-11T16:35:19 BDT" name="setup" finished-at="2024-06-11T16:35:24 BDT" duration-ms="4586" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.testcases.PlaceOrderAsGuestTest.testToVerifyPlaceOrderAsGuest(java.lang.String,org.testng.ITestContext)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testToVerifyPlaceOrderAsGuest(java.lang.String,org.testng.ITestContext)[pri:0, instance:tests.testcases.PlaceOrderAsGuestTest@f325091]" started-at="2024-06-11T16:35:24 BDT" name="testToVerifyPlaceOrderAsGuest" description="User should be able to successfully place order as a guest user" data-provider="TestDataProviderFunction" finished-at="2024-06-11T16:35:51 BDT" duration-ms="27519" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Alla,Donald,email,ABC Ltd,Bangladesh,Dhaka,45 demo street,1200,65898652,Continue]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7cd8ca34]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Select next day air shipping method expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Select next day air shipping method expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at abstractComponents.FrameworkAssertionLibrary.stepAssertionShouldBeTrue(FrameworkAssertionLibrary.java:36)
+at tests.steps.PlaceOrderAsGuestSteps.userSelectShippingMethodAndClickContinue(PlaceOrderAsGuestSteps.java:141)
+at tests.testcases.PlaceOrderAsGuestTest.testToVerifyPlaceOrderAsGuest(PlaceOrderAsGuestTest.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testToVerifyPlaceOrderAsGuest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.testcases.PlaceOrderAsGuestTest@f325091]" started-at="2024-06-11T16:35:52 BDT" name="tearDown" finished-at="2024-06-11T16:35:52 BDT" duration-ms="267" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testToVerifyPlaceOrderAsGuest status=FAILURE method=PlaceOrderAsGuestTest.testToVerifyPlaceOrderAsGuest(java.lang.String,org.testng.ITestContext)[pri:0, instance:tests.testcases.PlaceOrderAsGuestTest@f325091] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.testcases.PlaceOrderAsGuestTest -->
+    </test> <!-- Nopcommerce place order as guest -->
+  </suite> <!-- UI -->
+</testng-results>

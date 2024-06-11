@@ -1,6 +1,6 @@
 package testComponents;
 
-import utils.ExtentReporterNG;
+import Utils.ExtentReporterNG;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.ITestListener;

@@ -1,7 +1,7 @@
 package testComponents;
 
 import abstractComponents.FrameworkAssertionLibrary;
-import utils.ExtentReporterNG;
+import Utils.ExtentReporterNG;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;

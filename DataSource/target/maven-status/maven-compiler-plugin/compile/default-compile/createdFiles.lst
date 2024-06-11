@@ -1,4 +1,4 @@
-DataLoader\TestData.class
-DataLoader\Data\testToVerifyRegistration.class
-DataLoader\CSVFields.class
-DataLoader\TestEssentials.class
+dataLoader\CSVFields.class
+dataLoader\data\testToVerifyRegistration.class
+dataLoader\TestData.class
+dataLoader\TestEssentials.class

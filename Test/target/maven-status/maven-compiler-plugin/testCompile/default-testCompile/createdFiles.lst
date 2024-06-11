@@ -1,8 +1,8 @@
-Tests\Testcases\PlaceOrderAsGuestTest.class
-TestComponents\BaseTest.class
-TestComponents\SuiteListener.class
-Tests\Testcases\UserRegistrationTest.class
-TestComponents\AssertionListener.class
-TestComponents\ReportListeners.class
-Tests\Steps\UserRegistrationSteps.class
-Tests\Steps\PlaceOrderAsGuestSteps.class
+tests\steps\UserRegistrationSteps.class
+testComponents\AssertionListener.class
+tests\steps\PlaceOrderAsGuestSteps.class
+tests\testcases\PlaceOrderAsGuestTest.class
+testComponents\BaseTest.class
+testComponents\ReportListeners.class
+tests\testcases\UserRegistrationTest.class
+testComponents\SuiteListener.class
