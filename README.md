@@ -11,7 +11,7 @@ This project is a comprehensive automation testing framework built in Java, util
 6. Logging and Reporting: Comprehensive logging mechanisms capture test execution details, while TestNG's built-in reporting features provide detailed test reports. Additionally, custom reporting tools may be integrated for enhanced visualization of test results.
 7. Parameterization and Data-Driven Testing: The framework supports parameterization and data-driven testing, allowing tests to be executed with different input data sets. External data sources such as Excel sheets or JSON files can be easily integrated.
 8. Maintenance and Scalability: The framework is designed for ease of maintenance and scalability, with clear separation of concerns and standardized coding practices. Regular updates ensure compatibility with evolving application requirements and technologies.
-
+9. Modular based
 ### Usage:
 
 1. Developers and QA engineers can write test scripts using Java, TestNG, and Selenium WebDriver, following the established framework structure and conventions.
@@ -25,6 +25,6 @@ This project is a comprehensive automation testing framework built in Java, util
 1. Pull the project in your environment
 2. Maven run command `mvn clean test`
 3. You can select platform for running the test in different platform by `-Dplatform`. And value for the parameter is for docker `docker`, for browser stack `browserStack`. and no platform requited for running on local
-4. You can different test suit by `-DsuiteFile=suites/regression.xml`
+4. You can run different test suit by `-DsuiteFile=suites/regression.xml` eg: `mvn clean test -Dbrowser=chrome -DsuiteXmlFile=place_order_as_guest.xml`
 
 Overall, this framework provides a robust and versatile solution for automated testing, empowering teams to efficiently validate application functionality, achieve faster release cycles, and deliver high-quality software products.

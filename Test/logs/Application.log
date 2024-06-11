@@ -1,31 +1,31 @@
-19:02:56.770 INFO  Starting testcase: testToVerifyPlaceOrderAsGuest
-19:02:58.562 INFO  Open URL: https://demo.nopcommerce.com/
-19:02:58.772 INFO  STEP: User landed on NopCommerce homepage
-19:02:59.634 INFO  Clicking cell phones category option
-19:03:02.636 INFO  STEP: User click Cell phones option from Electronics category
-19:03:03.312 INFO  Click on Nokia Lumia 1020 for details page
-19:03:03.313 INFO  STEP: User click on the Nokia Lumia 1020 for product details
-19:03:03.804 INFO  Enter quantity of product
-19:03:03.804 INFO  STEP: User set the quantity number 2 in the quantity field
-19:03:03.920 INFO  Click add to cart button
-19:03:03.921 INFO  STEP: User click on the ADD TO CART button
-19:03:05.079 INFO  Navigating to shopping cart
-19:03:05.079 INFO  STEP: User go to the shipping cart page
-19:03:05.299 INFO  Accept terms and condition
-19:03:06.129 INFO  Click checkout button
-19:03:06.130 INFO  STEP: Accept terms and condition and click checkout button
-19:03:07.047 INFO  Click checkout as guest button
-19:03:07.047 INFO  STEP: Click checkout as guest button
-19:03:13.314 INFO  First name input field filled with text Alla
-19:03:14.577 INFO  Last name input field filled with text Donald
-19:03:15.903 INFO  Email input field filled with text email202406163190660@automation.com
-19:03:17.117 INFO  Company input field filled with text ABC Ltd
-19:03:18.521 INFO  City input field filled with text Dhaka
-19:03:19.782 INFO  Address 1 input field filled with text 45 demo street
-19:03:20.950 INFO  Zip / postal code input field filled with text 1200
-19:03:22.136 INFO  Phone number input field filled with text 65898652
-19:03:22.220 INFO  CONTINUE button is clicked 
-19:03:22.220 INFO  STEP: Enter details for shipping
-19:03:24.304 INFO  Selecting shipping method
-19:03:24.619 INFO  'User should be able to successfully place order as a guest user' failed
-19:03:24.620 INFO  ---------------------------------------------------
+19:29:38.243 INFO  Starting testcase: testToVerifyPlaceOrderAsGuest
+19:29:39.402 INFO  Open URL: https://demo.nopcommerce.com/
+19:29:39.857 INFO  STEP: User landed on NopCommerce homepage
+19:29:40.867 INFO  Clicking cell phones category option
+19:29:43.872 INFO  STEP: User click Cell phones option from Electronics category
+19:29:44.633 INFO  Click on Nokia Lumia 1020 for details page
+19:29:44.633 INFO  STEP: User click on the Nokia Lumia 1020 for product details
+19:29:44.946 INFO  Enter quantity of product
+19:29:44.947 INFO  STEP: User set the quantity number 2 in the quantity field
+19:29:45.016 INFO  Click add to cart button
+19:29:45.017 INFO  STEP: User click on the ADD TO CART button
+19:29:46.180 INFO  Navigating to shopping cart
+19:29:46.180 INFO  STEP: User go to the shipping cart page
+19:29:46.282 INFO  Accept terms and condition
+19:29:47.345 INFO  Click checkout button
+19:29:47.346 INFO  STEP: Accept terms and condition and click checkout button
+19:29:48.262 INFO  Click checkout as guest button
+19:29:48.262 INFO  STEP: Click checkout as guest button
+19:29:55.215 INFO  First name input field filled with text Alla
+19:29:56.871 INFO  Last name input field filled with text Donald
+19:29:58.132 INFO  Email input field filled with text email2024061631906271@automation.com
+19:29:59.296 INFO  Company input field filled with text ABC Ltd
+19:30:00.639 INFO  City input field filled with text Dhaka
+19:30:01.824 INFO  Address 1 input field filled with text 45 demo street
+19:30:03.007 INFO  Zip / postal code input field filled with text 1200
+19:30:04.187 INFO  Phone number input field filled with text 65898652
+19:30:04.278 INFO  CONTINUE button is clicked 
+19:30:04.278 INFO  STEP: Enter details for shipping
+19:30:06.371 INFO  Selecting shipping method
+19:30:06.694 INFO  'User should be able to successfully place order as a guest user' failed
+19:30:06.695 INFO  ---------------------------------------------------
